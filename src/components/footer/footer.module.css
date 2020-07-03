@@ -1,0 +1,14 @@
+.footer {
+  padding: 100px 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
