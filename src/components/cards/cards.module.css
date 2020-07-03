@@ -12,6 +12,7 @@
 /* hover styles */
 .dogForBreed {
   position: relative;
+  cursor: pointer;
 }
 
 .dogImage {
