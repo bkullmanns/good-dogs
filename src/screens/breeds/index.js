@@ -33,9 +33,6 @@ function Breeds() {
   if (isLoading) {
     return "loading...";
   }
-  const dogData = dogs.map((dog) => {
-    return { img: dog.img, name: dog.name };
-  });
 
   return (
     <>

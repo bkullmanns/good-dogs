@@ -10,11 +10,10 @@ function Gallery({ dogs, open, onFullScreenToggle }) {
   });
 
   useEffect(() => {
-    console.log(gallery.current);
     if (gallery.current && open) {
       gallery.current.toggleFullScreen();
     }
-  }, [gallery.current, open]);
+  }, [open]);
 
   return (
     <div className={`${styles.gallery} ${open ? "" : styles.hidden}`}>

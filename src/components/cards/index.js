@@ -13,13 +13,11 @@ function Cards({ dogs }) {
         {dogs.map((dog) => {
           return (
             <div key={dog.id} className={styles.dogForBreed}>
-              <a className={styles.dogName} onClick={() => handleClick(dog)}>
+              <span className={styles.dogName} onClick={() => handleClick(dog)}>
                 {dog.name}
-              </a>
+              </span>
               <div className={styles.dogImage}>
-                {/* <a href=""> */}
                 <img src={dog.img} alt={dog.alt_img} />
-                {/*  </a> */}
               </div>
             </div>
           );

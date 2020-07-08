@@ -3,7 +3,6 @@ import { useRouteMatch } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import DetailComponent from "../../components/detail";
-import styles from "./detail.module.css";
 
 function Detail() {
   const match = useRouteMatch("/dogs/:breed/:id");
@@ -11,14 +10,16 @@ function Detail() {
   const [dog, setDog] = useState({});
 
   useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
     async function getId() {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/dogs/${match.params.breed}/${match.params.id}`
+          `${process.env.REACT_APP_API_URL}/dogs/${match.params.breed}/${match.params.id}`,
+          { signal }
         );
         const data = await response.json();
-        console.log(data);
 
         setDog(data);
         setIsLoading(false);
@@ -26,9 +27,12 @@ function Detail() {
         console.log("err", error);
       }
     }
-
     getId();
-  }, [match.params.id]);
+
+    return () => {
+      controller.abort();
+    };
+  }, [match.params.breed, match.params.id]);
 
   if (isLoading) {
     return "loading...";

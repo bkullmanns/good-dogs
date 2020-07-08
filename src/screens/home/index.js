@@ -8,10 +8,13 @@ function Home() {
   const [breeds, setBreeds] = React.useState({});
 
   useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
     async function getBreeds() {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/dogs/breeds`
+          `${process.env.REACT_APP_API_URL}/dogs/breeds`,
+          { signal }
         );
         const data = await response.json();
         const breedsData = data.reduce((breedsAcc, dog) => {
@@ -28,6 +31,10 @@ function Home() {
     }
 
     getBreeds();
+
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   return (

@@ -4,6 +4,7 @@ import styles from "./detail.module.css";
 
 function Detail({ dog }) {
   const [goodDog, setGoodDog] = useState(dog.good_dog);
+
   async function handleClick() {
     try {
       const response = await fetch(
@@ -11,9 +12,10 @@ function Detail({ dog }) {
         { method: "PATCH" }
       );
       const data = await response.json();
-      console.log(data);
       setGoodDog(data.good_dog);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -28,9 +30,6 @@ function Detail({ dog }) {
             <p className={styles.genre}>{dog.genre}</p>
             <p className={styles.bio}>{dog.bio}</p>
             <div className={styles.goodDogBox}>
-              {/*  <p className={styles.goodDog}>
-                <strong>This dog is a good dog x {goodDog}</strong>
-              </p> */}
               <button onClick={handleClick}>
                 Good Dog in {goodDog} times!
               </button>
