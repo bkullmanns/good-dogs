@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import styles from "./breeds.module.css";
 import Container from "../container";
+import Button from "../button";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Breeds(props) {
@@ -22,7 +23,7 @@ function Breeds(props) {
           <div className={styles.text}>
             <h3>{props.breed}</h3>
             <p>Check all the {props.breed} registered on our database!</p>
-            <button onClick={handleClick}>Go to breed page</button>
+            <Button onClick={handleClick}>Go to breed page</Button>
           </div>
           <div className={styles.cards}>
             <div className={styles.card1}>

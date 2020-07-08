@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Container from "../container";
+import Button from "../button";
 import styles from "./detail.module.css";
 
 function Detail({ dog }) {
@@ -30,7 +31,9 @@ function Detail({ dog }) {
             <p className={styles.genre}>{dog.genre}</p>
             <p className={styles.bio}>{dog.bio}</p>
             <div className={styles.goodDogBox}>
-              <button onClick={handleClick}>Good Dog {goodDog}x</button>
+              <Button bg="#5b56bc" hoverStyle="color" onClick={handleClick}>
+                Good Dog {goodDog}x
+              </Button>
             </div>
           </div>
         </div>

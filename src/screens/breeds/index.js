@@ -5,6 +5,7 @@ import Container from "../../components/container";
 import Gallery from "../../components/gallery";
 import PageLoader from "../../components/page-loader";
 import Header from "../../components/header";
+import Button from "../../components/button";
 import styles from "./breeds.module.css";
 
 function Breeds() {
@@ -45,9 +46,9 @@ function Breeds() {
               Those are all the dogs from the {match.params.breed} breed we have
             </h2>
             <p>And they are all good dogs</p>
-            <button onClick={() => setShouldShowGallery(true)}>
+            <Button onClick={() => setShouldShowGallery(true)}>
               Open Gallery
-            </button>
+            </Button>
           </div>
           <Gallery
             open={shouldShowGallery}

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./banner.module.css";
 import Container from "../container";
+import Button from "../button";
 import { useHistory } from "react-router-dom";
 
 function Banner() {
@@ -16,9 +17,9 @@ function Banner() {
         <div className={styles.bannerWrapper}>
           <h1>Welcome to the Good Dog Site</h1>
           <p>A simple good dog website where all dogs are good dogs!</p>
-          <button onClick={handleClick} className={styles.addBtn}>
+          <Button onClick={handleClick} bg="#5b56bc" hoverStyle="color">
             Add a new dog
-          </button>
+          </Button>
         </div>
       </Container>
     </section>

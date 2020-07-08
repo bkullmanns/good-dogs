@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+import Button from "../button";
 import styles from "./adddog.module.css";
 
 function Adddog() {
@@ -63,7 +63,7 @@ function Adddog() {
             <textarea name="bio" placeholder="Bio"></textarea>
           </label>
           <div className={styles.button}>
-            <button type="submit">Add good dog</button>
+            <Button type="submit">Add good dog</Button>
           </div>
         </form>
       </section>

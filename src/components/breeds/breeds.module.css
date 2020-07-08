@@ -3,23 +3,6 @@
   padding: 50px 20px;
 }
 
-.breeds button {
-  width: 200px;
-  padding: 9px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: none;
-  background: black;
-  transition: all 0.1s;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-.breeds button:hover {
-  transform: scale(1.1);
-}
-
 .breeds .text {
   padding: 30px;
   line-height: 3;
