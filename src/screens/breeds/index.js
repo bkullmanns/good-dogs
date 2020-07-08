@@ -3,6 +3,7 @@ import { useRouteMatch } from "react-router-dom";
 import Cards from "../../components/cards";
 import Container from "../../components/container";
 import Gallery from "../../components/gallery";
+import PageLoader from "../../components/page-loader";
 import Header from "../../components/header";
 import styles from "./breeds.module.css";
 
@@ -31,7 +32,7 @@ function Breeds() {
   }, [match.params.breed]);
 
   if (isLoading) {
-    return "loading...";
+    return <PageLoader />;
   }
 
   return (

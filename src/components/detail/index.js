@@ -30,9 +30,7 @@ function Detail({ dog }) {
             <p className={styles.genre}>{dog.genre}</p>
             <p className={styles.bio}>{dog.bio}</p>
             <div className={styles.goodDogBox}>
-              <button onClick={handleClick}>
-                Good Dog in {goodDog} times!
-              </button>
+              <button onClick={handleClick}>Good Dog {goodDog}x</button>
             </div>
           </div>
         </div>

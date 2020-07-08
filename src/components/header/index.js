@@ -5,6 +5,7 @@ import "hamburgers/dist/hamburgers.css";
 import classNames from "classnames";
 import Logo from "../logo";
 import Container from "../container";
+import throttle from "lodash.throttle";
 
 function Header({ whiteBgPage }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +19,13 @@ function Header({ whiteBgPage }) {
   }
 
   useEffect(() => {
-    const onScroll = () => {
+    const onScroll = throttle(() => {
       if (window.scrollY > 50) {
         setWithThiteBg(true);
       } else {
         setWithThiteBg(false);
       }
-    };
+    }, 230);
 
     const scrollListner = window.addEventListener("scroll", onScroll);
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouteMatch } from "react-router-dom";
 import Header from "../../components/header";
+import PageLoader from "../../components/page-loader";
 import Footer from "../../components/footer";
 import DetailComponent from "../../components/detail";
 
@@ -35,7 +36,7 @@ function Detail() {
   }, [match.params.breed, match.params.id]);
 
   if (isLoading) {
-    return "loading...";
+    return <PageLoader />;
   }
 
   return (

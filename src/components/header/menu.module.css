@@ -6,6 +6,7 @@ header {
   width: 100vw;
   z-index: 6;
   padding: 30px 0;
+  transition: all 0.3s;
 }
 
 .withWhiteBg {
