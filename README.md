@@ -1,6 +1,6 @@
 My first project learning/using ReactJS! Using hooks and [Create React App](https://github.com/facebook/create-react-app).
 
-It is hosted on (Netlify)(https://elastic-lovelace-793083.netlify.app/).
+It is hosted on [Netlify](https://elastic-lovelace-793083.netlify.app/).
 
 This project is a simple website consuming the [API](https://github.com/bkullmanns/api-dogs) I created.
 It is responsive with advanced CSS3 like Flexbox, CSS Grid, Selectors and CSS Modules.
